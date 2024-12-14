@@ -338,3 +338,145 @@ img {
 .pagination:hover {
   color: var(--black);
 }
+/* General Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size-base: 0.9rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.3rem;
+    --font-size-xl: 1.8rem;
+  }
+
+  body {
+    font-size: var(--font-size-base);
+  }
+
+  h1 { font-size: var(--font-size-xl); }
+  h2 { font-size: var(--font-size-lg); }
+  h3 { font-size: var(--font-size-md); }
+
+  /* Header */
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "logo"
+      "menu"
+      "button";
+    text-align: center;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .header__nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header__button {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  /* Hero Section */
+  .hero-image {
+    max-height: 300px;
+  }
+
+  /* Articles */
+  .article-ul li a {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .article-list__date {
+    width: auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /* Author Section */
+  .author__body {
+    font-size: var(--font-size-base);
+  }
+
+  /* Footer */
+  .footer {
+    margin: 2rem;
+  }
+}
+
+/* Extra Small Screens (Phones under 480px) */
+@media only screen and (max-width: 480px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .btn-delete {
+    padding: 8px 12px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  select,
+  textarea {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  /* Adjust container padding */
+  .container {
+    padding: 0 5px;
+  }
+
+  /* SearchBar */
+  .searchBar input {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  #searchClose {
+    padding: 10px;
+  }
+
+  /* Admin Posts */
+  .admin-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-posts li {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .admin-post-controls .btn {
+    padding: 4px 6px;
+  }
+}
+
+/* Tablets and Small Laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__logo {
+    font-size: 22px;
+  }
+
+  .hero-image {
+    max-height: 400px;
+  }
+
+  .article-ul li a {
+    flex-direction: row;
+    text-align: left;
+  }
+}
